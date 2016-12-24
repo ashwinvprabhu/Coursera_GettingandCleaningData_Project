@@ -1,16 +1,16 @@
 library(plyr)
 # Data collection
 # "y_train.txt" and "y_test.txt" -- Activity variable
-dataActivityTest <- read.table("UCI_HAR_Dataset/test/y_test.txt")
-dataActivityTrain <- read.table("UCI_HAR_Dataset/train/y_train.txt")
+dataActivityTest <- read.table("UCI HAR Dataset/test/y_test.txt")
+dataActivityTrain <- read.table("UCI HAR Dataset/train/y_train.txt")
 
 # "subject_train.txt" and "subject_test.txt" -- Subject variable
-dataSubjectTest <- read.table("UCI_HAR_Dataset/test/subject_test.txt")
-dataSubjectTrain <- read.table("UCI_HAR_Dataset/train/subject_train.txt")
+dataSubjectTest <- read.table("UCI HAR Dataset/test/subject_test.txt")
+dataSubjectTrain <- read.table("UCI HAR Dataset/train/subject_train.txt")
 
 # "x_train.txt" and "x_test.txt" -- Features variable
-dataFeaturesTest <- read.table("UCI_HAR_Dataset/test/x_test.txt")
-dataFeaturesTrain <- read.table("UCI_HAR_Dataset/train/x_train.txt")
+dataFeaturesTest <- read.table("UCI HAR Dataset/test/x_test.txt")
+dataFeaturesTrain <- read.table("UCI HAR Dataset/train/x_train.txt")
 
 # Binding the train and test data for Activity, Subject and Features
 dataActivity <- rbind(dataActivityTrain, dataActivityTest)
@@ -19,7 +19,7 @@ dataFeatures <- rbind(dataFeaturesTrain, dataFeaturesTest)
 
 names(dataActivity) <- c("Activity")
 names(dataSubject) <- c("Subject")
-dataFeaturesNames <- read.table("UCI_HAR_Dataset/features.txt")
+dataFeaturesNames <- read.table("UCI HAR Dataset/features.txt")
 names(dataFeatures) <- dataFeaturesNames$V2
 
 # Merge all data into the data frame "CompleteData"
